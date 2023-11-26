@@ -16,4 +16,11 @@ document.addEventListener('DOMContentLoaded', e => {
     tg.MainButton.setText('Hello');
     tg.MainButton.show();
   }
+
+
+  Telegram.WebApp.onEvent('mainButtonClicked', () => {
+    tg.sendData('hh');
+  });
+
+  console.log(tg.initDataUnsafe.user.first_name)
 });
