@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', e => {
     tg.MainButton.show();
   }
 
+  document.querySelector('.name').textContent = `${tg.initDataUnsafe.user.first_name}`;
+
 
   Telegram.WebApp.onEvent('mainButtonClicked', () => {
     tg.sendData('hh');
